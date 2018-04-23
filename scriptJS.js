@@ -16,21 +16,8 @@ $(function () {
 	$("#prenom").blur(function() {
    
 		var fn = document.getElementById('prenom').value;
-		if(fn == ""){
+		if(fn == "" || (/^[0-9]+$/.test(document.getElementById("prenom").value)) || fn.length <=2){
 			
-			document.getElementById('prenom').style.borderColor = "red";
-			return false;
-		}else{
-			document.getElementById('prenom').style.borderColor = "green";
-		}
-		if (/^[0-9]+$/.test(document.getElementById("prenom").value)) {
-			
-			document.getElementById('prenom').style.borderColor = "red";
-			return false;
-		}else{
-			document.getElementById('prenom').style.borderColor = "green";
-		}
-		if(fn.length <=2){
 			document.getElementById('prenom').style.borderColor = "red";
 			return false;
 		}else{
@@ -41,21 +28,8 @@ $(function () {
 	$("#nom").blur(function() {
    
 		var fn = document.getElementById('nom').value;
-		if(fn == ""){
+		if(fn == "" || (/^[0-9]+$/.test(document.getElementById("nom").value)) || fn.length <=2){
 			
-			document.getElementById('nom').style.borderColor = "red";
-			return false;
-		}else{
-			document.getElementById('nom').style.borderColor = "green";
-		}
-		if (/^[0-9]+$/.test(document.getElementById("nom").value)) {
-			
-			document.getElementById('nom').style.borderColor = "red";
-			return false;
-		}else{
-			document.getElementById('nom').style.borderColor = "green";
-		}
-		if(fn.length <=2){
 			document.getElementById('nom').style.borderColor = "red";
 			return false;
 		}else{
@@ -91,15 +65,12 @@ $(function () {
 	$("#password").blur(function() {
    
 		var fn = document.getElementById('password').value;
-		if(fn == ""){
+		if(fn == "" || fn.length <= 6){
 			 
 			document.getElementById('password').style.borderColor = "red";
 			return false;
 		}
-		if(fn.length <= 6){
-			document.getElementById('password').style.borderColor = "red";
-			return false;
-		}else{
+		else{
 			document.getElementById('password').style.borderColor = "green";
 		}
 	});
