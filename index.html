@@ -1,0 +1,56 @@
+﻿<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="./scriptJS.js"></script>
+<header></header>
+
+<body>
+
+<!--Connexion-->
+
+<div id="aboveLoginHead">
+	<div id="loginHead">
+		<form method="post" action="connexion.php">
+			<p><li><label>Numéro ou Mail</label> <br> <input type="text" name="contactInfo"/></li> 
+			<li><label>Mot de passe</label> <br> <input type="password" name="password"/><br><a href="">Informations de compte oubliées ?</a></li>
+			<li><button type="submit" id="buttonConnexion">Connexion</button></li></p>
+
+		</form>
+	</div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<!--Inscription-->
+
+<div id="subscription">
+<h10>Inscription </h10>
+<p>C'est gratuit (et ça le restera toujours)</p>
+	<form method="post" action="inscription.php">
+		<p><input placeholder="Prénom" type="text" name="userPrenom" id="prenom"/> <input placeholder="Nom de famille" type="text" name="userNom" id="nom"/></p>
+		<p><input placeholder="Numéro de mobile ou email" type="text" name="contactInfo" id="contactInfo"/></p>
+		<p><input placeholder="Confirmer le numéro de mobile ou email" type="text" name="contactInfoConfirm" id="contactInfoConfirm"/></p>
+		<p><input placeholder="Nouveau mot de passe" type="password" name="password" id="password"/></p>
+		<p><label>Date de Naissance <br><br> </label><input id="date" type="date" value="1995-06-01" name="birthdate"> <a href="">Pourquoi indiquer ma date de naissace ?</a></p>
+		
+		<div id="sexSelector">
+			<input type="radio" id="sexeChoice1" name="sexe" value="H">
+			<label for="contactChoice1">Homme</label>
+
+			<input type="radio" id="sexeChoice2" name="sexe" value="F">
+			<label for="contactChoice2">Femme</label>
+			<div id="conditions">En cliquant sur Inscription, vous acceptez nos Conditions générales. Découvrez comment nous recueillons, utilisons et partageons vos données en lisant notre Politique d’utilisation des données et comment nous utilisons les cookies et autres technologies similaires en consultant notre Politique d’utilisation des cookies. Vous recevrez peut-être des notifications par texto de notre part et vous pouvez à tout moment vous désabonner.</div>
+		</div>
+		
+	  <br>
+	  
+		  <div>
+			<button type="submit" id="buttonSub">Inscription</button>
+		  </div>
+	</form>
+</div>
+</body>
