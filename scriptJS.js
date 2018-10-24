@@ -3,6 +3,36 @@ $(function () {
 	
 	//Effet sur le bouton d'inscription
 	
+	$("#buttonConnexion").click(function(e){
+		$.post(
+			'connexion.php',
+			{
+				login : $("#coLogin").val(),
+				mdp : $("#coMDP").val()
+			},
+			alert("Connexion"),
+			'text'
+		)
+	}),
+	
+	/*$("#theForm").submit(function(e){
+		//var formData = $(this)?
+		$.ajax({
+			type : 'post',
+			url : 'connexion.php',
+			data : {
+				donnees : $(this).serialize(),
+			},
+			success : 'retourTestAjax',
+			error : alert("Fail"),
+			datatype : 'text'
+		})
+	}),*/
+	
+	function retourTestAjax(){
+		alert("Connexion");
+	}
+	
 	$("#buttonSub").hover(function() {
 		$("#buttonSub").stop().fadeTo(1200, .5);
 	},
